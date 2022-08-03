@@ -17,3 +17,5 @@
   }
 }
 ```
+### Next, I wcreated a DynamoDB table to handle locks and perform consistency checks. 
+### I configured S3 as the backend to store state file and Dynamo DB to handle locking. 
