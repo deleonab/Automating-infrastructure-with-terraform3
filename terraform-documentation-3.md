@@ -2,6 +2,8 @@
 
 ### I enabled versioning so we can see the full revision history of our state files
 ```
+  resource "aws_s3_bucket" "terraform_state" {
+  bucket = "dele-dev-terraform-bucket"
   versioning {
     enabled = true
   }
