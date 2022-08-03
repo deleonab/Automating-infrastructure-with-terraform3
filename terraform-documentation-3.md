@@ -22,6 +22,8 @@
 
 
 ```
+
+
 resource "aws_dynamodb_table" "terraform_locks" {
   name         = "terraform-locks"
   billing_mode = "PAY_PER_REQUEST"
@@ -33,3 +35,18 @@ resource "aws_dynamodb_table" "terraform_locks" {
 }
 ```
 
+
+### So, let us run terraform apply to provision resources.
+
+### Configure S3 Backend
+```
+terraform {
+  backend "s3" {
+    bucket         = "dev-terraform-bucket"
+    key            = "global/s3/terraform.tfstate"
+    region         = "eu-central-1"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
+}
+```
