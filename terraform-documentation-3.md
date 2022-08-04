@@ -79,3 +79,10 @@ output "dynamodb_table_name" {
   description = "The name of the DynamoDB table"
 }
 ```
+
+### Now, we need to create resources for different environments, such as: Dev, sit, uat, preprod, prod, etc.
+
+### This separation of environments can be achieved using one of two methods:
+
+### a. Terraform Workspaces
+### b. Directory based separation using terraform.tfvars file
