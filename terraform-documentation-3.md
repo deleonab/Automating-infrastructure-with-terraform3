@@ -3,7 +3,7 @@
 ### I enabled versioning so we can see the full revision history of our state files
 ```
   resource "aws_s3_bucket" "terraform_state" {
-  bucket = "dele-dev-terraform-bucket"
+  bucket = "dele-dev-terraform-bucket-2"
   versioning {
     enabled = true
   }
@@ -42,9 +42,9 @@ resource "aws_dynamodb_table" "terraform_locks" {
 ```
 terraform {
   backend "s3" {
-    bucket         = "dev-terraform-bucket"
+    bucket         = "dele-dev-terraform-bucket-2"
     key            = "global/s3/terraform.tfstate"
-    region         = "eu-central-1"
+    region         = "eu-west-2"
     dynamodb_table = "terraform-locks"
     encrypt        = true
   }
