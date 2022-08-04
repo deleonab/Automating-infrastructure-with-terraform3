@@ -33,3 +33,12 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 ### Configure S3 Backend
 
+terraform {
+  backend "s3" {
+    bucket         = "dele-dev-terraform-bucket-2"
+    key            = "global/s3/terraform.tfstate"
+    region         = "eu-central-1"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
+}
