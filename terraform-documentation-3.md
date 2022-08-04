@@ -56,3 +56,13 @@ terraform {
 ```
 
 ![S3 backend success](./images/backend-success.JPG)
+
+
+### Next, we need to run terraform init ato reinitialise the back end.
+```
+terraform init
+```
+
+### The tfstatefile is now inside the S3 bucket
+
+### The DynamoDB table now has an entry which includes state file status
