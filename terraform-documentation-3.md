@@ -37,6 +37,10 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 
 ### So, let us run terraform apply to provision resources.
+```
+terraform apply
+```
+### We need to have created the S3 bucket and Dynamodb table before configuring the S3 backend below
 
 ### Configure S3 Backend
 ```
