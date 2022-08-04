@@ -50,3 +50,5 @@ terraform {
   }
 }
 ```
+
+![S3 backend success](./images/backend-success.JPG)
