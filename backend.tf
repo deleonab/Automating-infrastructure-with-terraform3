@@ -37,7 +37,7 @@ terraform {
   backend "s3" {
     bucket         = "dele-dev-terraform-bucket-2"
     key            = "global/s3/terraform.tfstate"
-    region         = "eu-central-1"
+    region         = "eu-west-2"
     dynamodb_table = "terraform-locks"
     encrypt        = true
   }
