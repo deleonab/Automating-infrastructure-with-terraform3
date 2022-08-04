@@ -66,3 +66,5 @@ terraform init
 ### The tfstatefile is now inside the S3 bucket
 
 ### The DynamoDB table now has an entry which includes state file status
+
+### Next, I updated the output.tf file so that the S3 bucket Amazon Resource Names ARN and DynamoDB table name can be displayed.
